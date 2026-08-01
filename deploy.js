@@ -1,18 +1,41 @@
 import dotenv from "dotenv";
-import Neocities from "neocities";
+import { glob } from "glob";
+import fs from "fs";
 
 dotenv.config();
 
-const api = new Neocities(
-    process.env.NEOCITIES_USER,
-    process.env.NEOCITIES_PASSWORD
+const files = await glob("_site/**/*", {
+    nodir: true
+});
+
+const form = new FormData();
+
+for (const file of files) {
+    const relativePath = file
+        .replace("_site\\", "")
+        .replaceAll("\\", "/");
+
+    form.append(
+        relativePath,
+        new Blob([fs.readFileSync(file)])
+    );
+}
+
+const response = await fetch(
+    "https://neocities.org/api/upload",
+    {
+        method: "POST",
+        headers: {
+            Authorization:
+                "Basic " +
+                Buffer.from(
+                    `${process.env.NEOCITIES_USER}:${process.env.NEOCITIES_PASSWORD}`
+                ).toString("base64")
+        },
+        body: form
+    }
 );
 
-api.upload("_site", (error) => {
-    if (error) {
-        console.log(error);
-        return;
-    }
+const data = await response.json();
 
-    console.log("O site foi atualizado!");
-});
+console.log(data);

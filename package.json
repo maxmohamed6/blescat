@@ -17,6 +17,6 @@
   },
   "dependencies": {
     "dotenv": "^17.4.2",
-    "neocities": "^0.0.3"
+    "glob": "^13.0.6"
   }
 }
