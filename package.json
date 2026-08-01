@@ -1,0 +1,22 @@
+{
+  "name": "blescat",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "deploy": "npm run build && node deploy.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "neocities": "^0.0.3"
+  }
+}

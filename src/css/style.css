@@ -1,0 +1,160 @@
+:root {
+    --font-body: "Courier Prime", monospace;
+    --font-title: "Courier Prime", monospace;
+}
+
+
+
+body {
+    font-family: var(--font-body);
+    background-color: #0D0D0B;
+    color: white;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-title);
+}
+
+@media (max-width: 445px) {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+pre {
+    width: fit-content;
+    margin: 0;
+    text-align: center;
+    font-size: clamp(8px, 2vw, 16px);
+  }
+
+.container {
+    display: flex;
+    margin: 0 auto;
+    width: clamp(100px, 80vw, 1500px);
+
+    transform: scale(0.8);
+    transform-origin: top center;
+}
+
+#left-box {
+    flex: 1; 
+    padding: 10px;
+    border-right: 1px solid white;
+    
+}
+
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+
+    #left-box {
+        border-right: none;         
+        border-bottom: 1px solid white; 
+    }
+}
+
+#right-box {
+    flex: 3; 
+    padding: 10px;
+}
+
+.pfp {
+    max-width: 80%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+a {
+    position: relative;
+    color: rgb(144, 105, 134);
+    text-decoration: none;
+}
+
+a.no-hover-link {
+    color: white;
+}
+
+a::before,
+a::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    width: 0;
+    height: 1px;
+    background: rgb(144, 105, 134);
+    transition: width 0.4s ease;
+}
+
+a::before {
+    left: 50%;
+}
+
+a::after {
+    right: 50%;
+}
+
+a:hover::before,
+a:hover::after {
+    width: 50%;
+}
+
+a.no-hover-link::after {
+    display: none;
+}
+
+a.no-hover-link::before {
+    display: none;
+}
+
+.mp3-player {
+    position: relative;
+    width: clamp(200px, 65vw, 300px);
+        transform-origin: top left;
+}
+
+.mp3-player img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+.screen-mp3 {
+    position: absolute;
+    left: 26.5%;
+    top: 41.5%;
+    width: 51.5%;
+    height: 12%;
+    overflow: visible;
+    font-family: monospace;
+    font-size: 10px;
+    color: black;
+}
+
+.screen-mp3 iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+@media (max-width: 200px) {
+
+    iframe {
+        font-size: 1.5rem;
+    }
+
+}
+
+.welcome img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
