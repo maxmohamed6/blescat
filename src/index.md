@@ -101,7 +101,7 @@ title: blescat
 
         <div style="border: 2px solid white; width: 75%; margin: 0 auto;">
 
-            <h3 style=" text-align: center;">atualizações</h3>
+            <h2 style="text-align: center;">atualizações</h2>
 
         </div>
 
@@ -110,13 +110,19 @@ title: blescat
 
             <div>
 
-            <ul>
-            {% for post in collections.blog | reverse | slice(0,5) %}
-                <li>
-                    <a href="{{ post.url }}">{{ post.data.title }}</a>
-                </li>
-            {% endfor %}
-            </ul>
+                <h3 style=" text-align: center;">💭 Diário 💭</h3>
+
+                <p style="text-align: center;"><a href="/diario">Todos os posts do dário</a></p>
+
+                <ul class="post-list">
+                    {% for post in collections.diario | reverse %}
+                        <li>
+                            <a href="{{ post.url }}">
+                                > [{{ post.date | date: "%d/%m/%Y %H:%M" }}] {{ post.data.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
 
             </div>
 

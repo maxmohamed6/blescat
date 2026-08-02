@@ -3,8 +3,6 @@
     --font-title: "Courier Prime", monospace;
 }
 
-
-
 body {
     font-family: var(--font-body);
     background-color: #0D0D0B;
@@ -15,50 +13,29 @@ h1, h2, h3 {
     font-family: var(--font-title);
 }
 
-@media (max-width: 445px) {
-    header nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-}
-
 pre {
     width: fit-content;
     margin: 0;
     text-align: center;
     font-size: clamp(8px, 2vw, 16px);
-  }
+}
 
 .container {
     display: flex;
     margin: 0 auto;
     width: clamp(100px, 80vw, 1500px);
-
-    transform: scale(0.8);
+    transform: scale(0.9);
     transform-origin: top center;
 }
 
 #left-box {
-    flex: 1; 
+    flex: 1;
     padding: 10px;
     border-right: 1px solid white;
-    
-}
-
-@media (max-width: 700px) {
-    .container {
-        flex-direction: column;
-    }
-
-    #left-box {
-        border-right: none;         
-        border-bottom: 1px solid white; 
-    }
 }
 
 #right-box {
-    flex: 3; 
+    flex: 3;
     padding: 10px;
 }
 
@@ -103,26 +80,22 @@ a:hover::after {
     width: 50%;
 }
 
+a.no-hover-link::before,
 a.no-hover-link::after {
-    display: none;
-}
-
-a.no-hover-link::before {
     display: none;
 }
 
 .mp3-player {
     position: relative;
     width: clamp(200px, 65vw, 300px);
-        transform-origin: top left;
+    transform-origin: top left;
 }
 
-.mp3-player img {
+.mp3-player img,
+.welcome img {
     width: 100%;
-    max-width: 100%;
     height: auto;
     display: block;
-
 }
 
 .screen-mp3 {
@@ -144,17 +117,33 @@ a.no-hover-link::before {
     display: block;
 }
 
-@media (max-width: 200px) {
+.welcome img {
+    width: 50%;
+    margin: 0 auto;
+}
 
+
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+
+    #left-box {
+        border-right: none;
+        border-bottom: 1px solid white;
+    }
+}
+
+@media (max-width: 445px) {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 200px) {
     iframe {
         font-size: 1.5rem;
     }
-
-}
-
-.welcome img {
-    width: 50%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
 }

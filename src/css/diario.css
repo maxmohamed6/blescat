@@ -1,0 +1,30 @@
+.diario {
+    padding: 20px;
+    min-height: 300px;
+    font-size: 16px;
+}
+
+.diario p {
+    margin: 8px 0;
+    padding: 10px;
+}
+
+.diario a {
+    color: #8aff80;
+    font-family: "Courier Prime", monospace;
+}
+
+.diario a:hover {
+    color: #8aff80;
+}
+
+.diario a::before,
+.diario a::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    width: 0;
+    height: 1px;
+    background: #8aff80;
+    transition: width 0.4s ease;
+}
