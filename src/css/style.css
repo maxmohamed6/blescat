@@ -122,7 +122,13 @@ a.no-hover-link::after {
     margin: 0 auto;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 640px) {
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
 
     #left-box {
         border-right: none;
@@ -139,11 +145,20 @@ a.no-hover-link::after {
     
 }
 
-@media (max-width: 480px) {
-    header nav {
+@media (max-width: 400px) {
+
+        header nav {
         flex-direction: column;
         align-items: center;
         gap: 20px;
+    }
+
+    #left-box, #right-box {
+        flex-direction: column;
+    }
+
+        .container {
+        flex-direction: column;
     }
 
 }
