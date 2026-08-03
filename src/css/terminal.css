@@ -1,5 +1,5 @@
 .terminal {
-    width: 600px;
+    width: min(600px, 90vw);
     max-width: 90%;
     margin: 50px auto;
     background: #0c0c0c;
@@ -50,9 +50,10 @@
 }
 
 .post-list a {
-    color: white;
+    color: grey;
     text-decoration: none;
     font-family: "Courier Prime", monospace;
+    transition: all 0.3s ease;
 }
 
 .post-list a:hover {

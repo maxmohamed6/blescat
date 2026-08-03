@@ -10,8 +10,10 @@
 }
 
 .diario a {
-    color: #8aff80;
+    color: grey;
+    text-decoration: none;
     font-family: "Courier Prime", monospace;
+    transition: all 0.3s ease;
 }
 
 .diario a:hover {

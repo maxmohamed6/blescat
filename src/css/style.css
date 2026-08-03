@@ -48,8 +48,9 @@ pre {
 
 a {
     position: relative;
-    color: rgb(144, 105, 134);
+    color: grey;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 a.no-hover-link {
@@ -63,7 +64,7 @@ a::after {
     bottom: -3px;
     width: 0;
     height: 1px;
-    background: rgb(144, 105, 134);
+    background: #8aff80;
     transition: width 0.4s ease;
 }
 
@@ -78,6 +79,10 @@ a::after {
 a:hover::before,
 a:hover::after {
     width: 50%;
+}
+
+a:hover {
+    color: #8aff80;
 }
 
 a.no-hover-link::before,
