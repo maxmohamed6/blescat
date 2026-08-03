@@ -110,7 +110,7 @@ title: blescat
 
             <div>
 
-                <h3 style=" text-align: center;">💭 Diário 💭</h3>
+                <h3 style=" text-align: center;">📓 Diário 📓</h3>
 
                 <p style="text-align: center;"><a href="/diario">Todos os posts do dário</a></p>
 
