@@ -3,12 +3,12 @@ layout: layouts/base.njk
 title: blescat
 ---
 
-<div class="container" style="border: 4px solid white">
+<div class="container">
 
     <aside id="left-box" style="margin-right: 0px;">
 
         <div style="text-align: center;">
-            <img class="pfp" src="/images/pfp-gif.gif" style="width: 150px; border: 4px solid white;" alt = "blescat's pfp">
+            <img class="pfp" src="/images/pfp-gif.gif" style="width: 150px; border: 3px solid white; border-radius: 5px" alt = "blescat's pfp">
 
             <h1> "blescat" </h1>
             <p> webdev | artista </p>

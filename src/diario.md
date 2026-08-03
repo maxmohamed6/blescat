@@ -5,7 +5,8 @@ title: O diário de blescat
 
 <div class="terminal">
     <div class="terminal-header">
-        C:\Users\Max\blescat
+        <span>C:\Users\maxmoh\blescat\diario</span>
+        <span class="close-terminal">X</span>
     </div>
 
     <div class="terminal-body">

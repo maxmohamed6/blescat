@@ -1,0 +1,24 @@
+body {
+    background-image: url('../images/about-me-bg.png');
+    background-repeat: repeat;
+    color: white;
+    animation: moveTiles 30s linear infinite;
+}
+
+@keyframes moveTiles {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 256px 256px;
+    }
+}
+
+.old-tv {
+    width: 100%;
+    height: auto;
+    max-width: 30%;
+    margin: 0 auto;
+    
+}

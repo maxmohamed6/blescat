@@ -26,6 +26,9 @@ pre {
     width: clamp(100px, 80vw, 1500px);
     transform: scale(0.9);
     transform-origin: top center;
+    box-shadow: 0 0 20px rgba(0,0,0,.5);
+    background-color: #0D0D0B;
+    border: 4px solid white;
 }
 
 #left-box {
@@ -42,7 +45,6 @@ pre {
 .pfp {
     max-width: 80%;
     height: auto;
-    border-radius: 50%;
     margin-bottom: 20px;
 }
 
