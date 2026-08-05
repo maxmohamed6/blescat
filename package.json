@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "eleventy --serve",
     "build": "eleventy",
-    "deploy": "npm run build && node deploy.js"
+    "deploy": "node deploy.js"
   },
   "keywords": [],
   "author": "",

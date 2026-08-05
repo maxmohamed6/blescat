@@ -3,7 +3,6 @@ title: Meu primeiro post
 date: 2026-08-01T19:31:00-03:00
 description: I have fingers and I must blog.
 tags:
-  - diario
 ---
 
 ---

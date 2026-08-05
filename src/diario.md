@@ -14,13 +14,13 @@ title: O diário de blescat
         <p>C:\Users\Max\blescat> <span class="cursor">█</span></p>
 
         <ul class="post-list">
-            {% for post in collections.diario | reverse %}
-                <li>
-                    <a href="{{ post.url }}">
-                        > [{{ post.date | date: "%d/%m/%Y %H:%M" }}] {{ post.data.title }}
-                    </a>
-                </li>
-            {% endfor %}
+            {% for post in collections.diario %}
+            <li>
+                <a href="{{ post.url }}">
+                    > [{{ post.date | date: "%d/%m/%Y %H:%M" }}] {{ post.data.title }}
+                </a>
+            </li>
+        {% endfor %}
         </ul>
 
     </div>

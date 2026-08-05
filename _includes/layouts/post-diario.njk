@@ -15,8 +15,14 @@ layout: layouts/diario.njk
 
     <a href="/diario">< Voltar</a>
 
-        <h2>>{{ title }}<</h2>
+        <h2 style="color: #8aff80">>{{ title }}<</h2>
+
+    <div style="color: grey">
         <h3>{{ date.toLocaleString() }}</h3>
+        <h4>"{{ description }}"</h4>
+        <h4>tags: {{ tags }}</h4>
+
+    </div>
 
         <article>
             {{ content | safe }}

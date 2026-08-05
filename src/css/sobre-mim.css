@@ -1,11 +1,126 @@
+html,
 body {
-    background-image: url('../images/about-me-bg.png');
+    height: auto;
+}
+
+body {
+    background-image: url("../images/about-me-bg.png");
     background-repeat: repeat;
     color: white;
     animation: moveTiles 30s linear infinite;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    width: clamp(100px, 80vw, 1500px);
+    margin: 0 auto;
+}
+
+.about-content {
+    display: flex;
+    width: 100%;
+}
+
+#left-box {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid #8aff80;
+    border-bottom: 2px solid #8aff80;
+    border-right: 2px solid #8aff80;
+    padding-top: 0px;
+
+}
+
+#right-box {
+    flex: 3;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #8aff80;
+    border-top: 2px solid #8aff80;
+    padding-top: 0px;
+}
+
+.content {
+    border: 3px solid white;
+}
+
+.content-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 45px;
+    border-bottom: 2px solid white;
+
+    background-image: url("../images/about-me-bg2.png");
+    background-repeat: repeat;
+    color: white;
+    animation: moveTiles 30s linear infinite;
+}
+
+.content-content {
+    padding: 15px;
+}
+
+.content-content p {
+    text-align: center;
+}
+
+.small-title {
+    display: block;
+    width: auto;
+    height: clamp(20px, 50vw, 50px);
+}
+
+.pfp {
+    display: block;
+    width: 150px;
+    max-width: 100%;
+    margin: 0 auto;
+    border: 3px solid white;
+}
+
+.interest {
+    transition: transform .3s ease;
+}
+
+.interest:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.projects-content {
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.badges-marquee {
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 0;
+}
+
+.badges {
+    width: max-content;
+    animation: marquee 30s linear infinite;
+}
+
+.badges:hover {
+    animation-play-state: paused;
+}
+
+.badges img {
+    width: 88px;
+    height: auto;
+    flex-shrink: 0;
+}
+
 @keyframes moveTiles {
+
     from {
         background-position: 0 0;
     }
@@ -13,12 +128,34 @@ body {
     to {
         background-position: 256px 256px;
     }
+
 }
 
-.old-tv {
-    width: 100%;
-    height: auto;
-    max-width: 30%;
-    margin: 0 auto;
-    
+@keyframes marquee {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+@media (max-width: 640px) {
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    #left-box {
+        border-right: none;
+        border-bottom: 1px solid #8aff80;
+    }
+
+    .projects-content {
+        margin-top: 10px;
+    }
+
 }
