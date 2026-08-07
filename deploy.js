@@ -43,7 +43,10 @@ execSync("npm run build", {
 dotenv.config();
 
 const files = await glob("_site/**/*", {
-    nodir: true
+    nodir: true,
+    ignore: [
+        "_site/images/art/**"
+    ]
 });
 
 const form = new FormData();
