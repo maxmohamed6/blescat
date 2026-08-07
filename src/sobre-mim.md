@@ -12,7 +12,6 @@ title: Sobre o Blescat
         <aside id="left-box">
 
             <div class="content">
-
                 <div class="content-title">
                     <img class="small-title" src="/images/eu.gif" alt="Eu">
                 </div>
@@ -32,7 +31,6 @@ title: Sobre o Blescat
             <br>
 
             <div class="content">
-
                 <div class="content-title">
                     <img class="small-title" src="/images/sobremim.gif" alt="Sobre mim">
                 </div>
@@ -57,7 +55,6 @@ title: Sobre o Blescat
         <main id="right-box">
 
             <div class="content">
-
                 <div class="content-title">
                     <img class="small-title" src="/images/quem-sou-eu.gif" alt="Quem sou eu">
                 </div>
@@ -92,7 +89,6 @@ title: Sobre o Blescat
             <br>
 
             <div class="content">
-
                 <div class="content-title">
                     <img class="small-title" src="/images/interesses.gif" alt="Interesses">
                 </div>
@@ -116,7 +112,6 @@ title: Sobre o Blescat
     </div>
 
     <section class="content projects-content">
-
         <div class="content-title">
             <span>badges</span>
         </div>

@@ -9,6 +9,14 @@ body {
     color: white;
 }
 
+.header-style {
+    background-color: #0D0D0B;
+}
+
+.footer-style {
+    background-color: #0D0D0B;
+}
+
 h1, h2, h3 {
     font-family: var(--font-title);
 }

@@ -10,6 +10,12 @@ export default function(eleventyConfig) {
             .sort((a, b) => b.date - a.date);
     });
 
+    eleventyConfig.addCollection("arte", function(collectionApi) {
+    return collectionApi
+        .getFilteredByTag("arte")
+        .sort((a, b) => b.inputPath.localeCompare(a.inputPath));
+    });
+
     return {
         dir: {
             input: "src",

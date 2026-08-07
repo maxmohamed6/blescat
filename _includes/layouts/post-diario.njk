@@ -13,20 +13,39 @@ layout: layouts/diario.njk
 
     <div class="diario">
 
-    <a href="/diario">< Voltar</a>
+        <a href="/diario">< Voltar</a>
 
         <h2 style="color: #8aff80">>{{ title }}<</h2>
 
-    <div style="color: grey">
-        <h3>{{ date.toLocaleString() }}</h3>
-        <h4>"{{ description }}"</h4>
-        <h4>tags: {{ tags }}</h4>
+        <div style="color: grey">
+            <h3>{{ date.toLocaleString() }}</h3>
+            <h4>"{{ description }}"</h4>
+            <h4>tags: {{ tags }}</h4>
 
-    </div>
+        </div>
 
         <article>
             {{ content | safe }}
         </article>
+
+        {% if gif %}
+            <div class="terminal">
+
+            <div class="terminal-header">
+                <span>gif-do-dia.exe</span>
+                <span class="close-terminal">X</span>
+            </div>
+
+            <div style="text-align: center;">
+                    <iframe 
+                        src="{{ gif }}"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+            </div>
+
+            </div>
+        {% endif %}
 
         <p>C:\Users\Max\blescat> <span class="cursor">█</span></p>
 
