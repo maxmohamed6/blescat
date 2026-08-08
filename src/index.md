@@ -99,11 +99,39 @@ title: blescat
 
 <br>
 
+
         <div style="border: 2px solid white; width: 75%; margin: 0 auto;">
 
             <h2 style="text-align: center;">atualizações</h2>
 
         </div>
+
+
+        <div style="border: 2px solid white; width: 75%; margin: 0 auto;">
+
+
+            <div class="arte">
+
+                <h3 style=" text-align: center;">🎨 Última arte 🎨</h3>
+
+                <p style="text-align: center;"><a href="/arte">Todas as artes</a></p>
+
+                {% assign artes = collections.arte | sort: "date" %}
+                {% assign ultima_arte = artes | last %}
+
+                    <img src="{{ ultima_arte.data.image }}" alt="{{ ultima_arte.data.title }}">
+
+                </a>
+
+
+            </div>
+
+            
+
+        </div>
+
+<br>
+
 
         <div style="border: 2px solid white; width: 75%; margin: 0 auto;">
 
@@ -126,7 +154,11 @@ title: blescat
 
             </div>
 
+            
+
         </div>
+
+        
 
 
     </main>

@@ -137,6 +137,19 @@ a.no-hover-link::after {
     margin: 0 auto;
 }
 
+.arte img{
+    display: block;
+    width: clamp(100px, 50vw, 300px);
+    margin: 0 auto;
+    transform-origin: center;
+    border: 3px solid white;
+}
+
+.arte a::before,
+.arte a::after {
+    display: none;
+}
+
 @media (max-width: 640px) {
 
     header nav {
@@ -167,6 +180,18 @@ a.no-hover-link::after {
         align-items: center;
         gap: 20px;
     }
+
+    #left-box, #right-box {
+        flex-direction: column;
+    }
+
+        .container {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 950px) {
 
     #left-box, #right-box {
         flex-direction: column;
