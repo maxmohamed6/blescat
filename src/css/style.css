@@ -143,11 +143,22 @@ a.no-hover-link::after {
     margin: 0 auto;
     transform-origin: center;
     border: 3px solid white;
+    cursor: zoom-in;
 }
 
 .arte a::before,
 .arte a::after {
     display: none;
+}
+
+.glightbox-container .gslide-image img {
+    max-width: 70vw;
+    max-height: 70vh;
+}
+
+.gprev,
+.gnext {
+    display: none !important;
 }
 
 @media (max-width: 640px) {

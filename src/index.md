@@ -3,6 +3,8 @@ layout: layouts/base.njk
 title: blescat
 ---
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
 <div class="container">
 
     <aside id="left-box" style="margin-right: 0px;">
@@ -14,7 +16,8 @@ title: blescat
             <p> webdev | artista </p>
             <p> <span id="idade"></span> 🇧🇷 </p>
 
-            <img src = "https://em-content.zobj.net/source/serenityos/392/flag-brazil_1f1e7-1f1f7.png" width="20" height="18"><iframe src="https://free.timeanddate.com/clock/i9uqn5oj/n601/fn8/fcfff/tct/pct/ftb" frameborder="0" width="94" height="15" allowtransparency="true"></iframe>
+            <img src="https://em-content.zobj.net/source/serenityos/392/flag-brazil_1f1e7-1f1f7.png" width="20" height="18" style="margin-bottom: -5px; font-weight: bold">
+            <span id="relogio"></span>
 
         </div>
 <br>
@@ -90,7 +93,7 @@ title: blescat
                 </p>
 
                 <p style="margin: 50px; margin-top: 0; text-align: center;">
-                    Este é um pequeno espaço onde reúno tudo o que faz parte do meu mundo: pensamentos, projetos, artes e outras coisas que resolvo compartilhar. Se quiser saber um pouco mais sobre quem sou, dê uma olhada na aba <a>Sobre mim</a>.
+                    Este é um pequeno espaço onde reúno tudo o que faz parte do meu mundo: pensamentos, projetos, artes e outras coisas que resolvo compartilhar. Se quiser saber um pouco mais sobre quem sou, dê uma olhada na aba <a href="/sobre-mim/">Sobre mim</a>.
                 </p>
 
             </div>
@@ -119,6 +122,8 @@ title: blescat
                 {% assign artes = collections.arte | sort: "date" %}
                 {% assign ultima_arte = artes | last %}
 
+                <a href="{{ ultima_arte.data.image }}" class="glightbox art-card">
+
                     <img src="{{ ultima_arte.data.image }}" alt="{{ ultima_arte.data.title }}">
 
                 </a>
@@ -143,7 +148,7 @@ title: blescat
                 <p style="text-align: center;"><a href="/diario">Todos os posts do dário</a></p>
 
                 <ul class="post-list">
-                    {% for post in collections.diario | reverse %}
+                    {% for post in collections.diario | reverse | slice: 0, 5 %}
                         <li>
                             <a href="{{ post.url }}">
                                 > [{{ post.date | date: "%d/%m/%Y %H:%M" }}] {{ post.data.title }}
@@ -165,3 +170,11 @@ title: blescat
     
 
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+<script>
+    const lightbox = GLightbox({
+        selector: '.glightbox'
+    });
+</script>
