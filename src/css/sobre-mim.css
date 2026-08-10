@@ -159,3 +159,26 @@ body {
     }
 
 }
+
+.pinterest-content iframe {
+    max-width: 100%;
+    width: 95%;
+    height: 300px;
+}
+
+.pinterest-content a::before,
+.pinterest-content a::after {
+    display: none;
+}
+
+.gaming-content iframe {
+    max-width: 100%;
+    width: 95%;
+    height: 300px;
+}
+
+.gaming-content a::before,
+.gaming-content a::after {
+    display: none;
+}
+

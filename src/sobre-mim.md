@@ -111,6 +111,38 @@ title: Sobre o Blescat
 
     </div>
 
+
+    <section class="content projects-content">
+        <div class="content-title">
+            <span>O que eu jogo?</span>
+        </div>
+
+        <div class="gaming-content">
+            <center>
+                <a href="https://www.exophase.com/user/theblessedcat/"><img src="https://card.exophase.com/2/0/293888.png?1786391581"></a>
+            </center>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="content projects-content">
+        <div class="content-title">
+            <span>No que eu me baseio?</span>
+        </div>
+
+        <div class="pinterest-content">
+            <center>
+                <iframe src="https://petracoding.github.io/pinterest/board.html?link=maxmohamed123/focking-ideas/&hideHeader=1&hideFooter=1&transparent=1"></iframe>
+            </center>
+
+        </div>
+
+    </section>
+
+
     <section class="content projects-content">
         <div class="content-title">
             <span>badges</span>
