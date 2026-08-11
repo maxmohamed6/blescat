@@ -69,12 +69,6 @@ title: Sobre o Blescat
                     </p>
 
                     <p>
-                        Meu gosto musical é extremamente
-                        aleatório e adoro descobrir coisas
-                        novas.
-                    </p>
-
-                    <p>
                         Sou um homem jovem-adulto brasileiro
                         apaixonado por desenhar em qualquer
                         superfície possível e amo apreciar
@@ -130,7 +124,7 @@ title: Sobre o Blescat
 
     <section class="content projects-content">
         <div class="content-title">
-            <span>No que eu me baseio?</span>
+            <span>Meu pinterest?</span>
         </div>
 
         <div class="pinterest-content">
@@ -148,29 +142,31 @@ title: Sobre o Blescat
             <span>badges</span>
         </div>
 
-        <div class="badges-marquee">
 
             <div class="badges">
 
-                <img src="/images/brazilian.png">
-                <img src="/images/he-him.png">
-                <img src="/images/straight.png">
-                <img src="/images/infp.png">
-                <img src="/images/gemini.png">
-                <img src="/images/in-relationship.png">
-                <img src="/images/violin.png">
-                <img src="/images/coder.png">
-                <img src="/images/ptbr.png">
-                <img src="/images/eng.png">
-                <img src="/images/right-handed.png">
-                <img src="/images/art.png">
-                <img src="/images/webcore.png">
-                <img src="/images/pc-gamer.png">
-                <img src="/images/switch.png">
+                <center>
+
+                    <img src="/images/brazilian.png">
+                    <img src="/images/he-him.png">
+                    <img src="/images/straight.png">
+                    <img src="/images/infp.png">
+                    <img src="/images/gemini.png">
+                    <img src="/images/in-relationship.png">
+                    <img src="/images/violin.png">
+                    <img src="/images/coder.png">
+                    <img src="/images/ptbr.png">
+                    <img src="/images/eng.png">
+                    <img src="/images/right-handed.png">
+                    <img src="/images/art.png">
+                    <img src="/images/webcore.png">
+                    <img src="/images/pc-gamer.png">
+                    <img src="/images/switch.png">
+
+                </center>
 
             </div>
 
-        </div>
 
     </section>
 

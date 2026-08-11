@@ -45,7 +45,8 @@ dotenv.config();
 const files = await glob("_site/**/*", {
     nodir: true,
     ignore: [
-        "_site/images/art/**"
+        "_site/images/art/**",
+        "_site/images/fotos/**",
     ]
 });
 
