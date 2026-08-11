@@ -6,7 +6,61 @@ layout: layouts/base.njk
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 
 <article>
-    {{ content | safe }}
+    <div class="darkroom">
+
+
+    <div class="camera">
+
+        <img class="camera-image" src="/images/camera3bgless2.png">
+
+        <div class="camera-screen">
+            <div class="photos">
+            
+                {% set anos = [] %}
+
+                {% for foto in collections.fotografia %}
+                    {% for tag in foto.data.tags %}
+                        {% if tag != "fotografia" and tag not in anos %}
+                            {% set anos = anos.concat([tag]) %}
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+
+                {% for ano in anos | sort | reverse %}
+
+                    <div class="photo-year">
+
+                        <h2>{{ ano }}</h2>
+
+                        <div class="photo-grid">
+
+                            {% for foto in collections.fotografia %}
+
+                                {% if ano in foto.data.tags %}
+
+                                    <a href="{{ foto.data.image }}" class="glightbox">
+
+                                        <img src="{{ foto.data.image }}" alt="{{ foto.data.title }}">
+
+                                        <span>{{ foto.data.title }}</span>
+
+                                    </a>
+
+                                {% endif %}
+
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+        
+
+        </div>
+    </div>
 </article>
 
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>

@@ -8,15 +8,11 @@ body {
     position: fixed;
     top: -100px;
     right: -100px;
-
     width: 300px;
     height: 300px;
-
     background: rgba(180, 0, 0, 0.15);
     border-radius: 50%;
-
     filter: blur(80px);
-
     pointer-events: none;
 }
 
@@ -54,15 +50,12 @@ a:hover {
 
 .camera {
     position: relative;
-
     width: min(900px, 80vw);
-
     margin: 0 auto;
 }
 
 .camera-image {
     display: block;
-
     width: 100%;
     height: auto;
 }
@@ -76,31 +69,52 @@ a:hover {
     border-radius: 5px;
     overflow: hidden;
     background: black;
+    z-index: 2;
 }
 
 .photos {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 4px;
-
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    gap: 6px;
     width: 100%;
     height: 100%;
-
-    padding: 5px;
+    padding: 6px;
     box-sizing: border-box;
-
     overflow-y: auto;
+    background: #080808;
 }
 
-.photos img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
+.photos a {
+    cursor: zoom-in;
+}
 
-    object-fit: cover;
-
+.photos a img {
     display: block;
+    width: 10vw;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    cursor: zoom-in;
+}
 
-    cursor: pointer;
+.photos a:hover::before,
+.photos a:hover::after {
+    display: none;
+}
+
+.photos span {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.glightbox-container .gslide-image img {
+    max-width: 80vw;
+    max-height: 80vh;
+}
+
+.gprev,
+.gnext {
+    display: none !important;
 }
