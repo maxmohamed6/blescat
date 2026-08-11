@@ -34,7 +34,7 @@ layout: layouts/base.njk
 
                         <div class="photo-grid">
 
-                            {% for foto in collections.fotografia %}
+                            {% for foto in collections.fotografia | reverse %}
 
                                 {% if ano in foto.data.tags %}
 
@@ -42,16 +42,16 @@ layout: layouts/base.njk
 
                                         <img src="{{ foto.data.image }}" alt="{{ foto.data.title }}">
 
-                                        <span>{{ foto.data.title }}</span>
+                                        <span class="photo-title">{{ foto.data.title }}</span>
 
                                     </a>
 
                                 {% endif %}
 
                             {% endfor %}
-
+                        
                         </div>
-
+                        
                     </div>
 
                 {% endfor %}
