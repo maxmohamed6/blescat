@@ -137,6 +137,33 @@ title: Blescat
 
 <br>
 
+        <div style="border: 2px solid white; width: 75%; margin: 0 auto;">
+
+
+            <div class="arte">
+
+                <h3 style=" text-align: center;">📸 Última fotografia tirada 📸</h3>
+
+                <p style="text-align: center;"><a href="/fotografias">Todas as fotos</a></p>
+
+                {% assign fotos = collections.fotografia | sort: "date" %}
+                {% assign ultima_foto = fotos | last %}
+
+                <a href="{{ ultima_foto.data.image }}" class="glightbox art-card">
+
+                    <img src="{{ ultima_foto.data.image }}" alt="{{ ultima_foto.data.title }}">
+
+                </a>
+
+
+            </div>
+
+            
+
+        </div>
+
+<br>
+
 
         <div style="border: 2px solid white; width: 75%; margin: 0 auto;">
 
