@@ -223,3 +223,65 @@ a.no-hover-link::after {
         font-size: 1.5rem;
     }
 }
+
+.guestbook {
+    font-family: var(--font-body);
+    background-color: #272724;
+    color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,.5);
+    animation: blink .8s infinite;
+    transition: all 0.3s ease;
+}
+
+.hit-counter {
+    transition: all 0.3s ease;
+}
+
+.guestbook-link::before,
+.guestbook-link::after,
+.guestbook-link:hover::before,
+.guestbook-link:hover::after {
+    display: none !important;
+}
+
+.guestbook:hover {
+    animation: blink-hover 0.8s infinite;
+    cursor: pointer;
+}
+
+.hit-counter:hover {
+    opacity: 0.7;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes blink-hover {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.75;
+    }
+}
+
+.chat-container {
+    width: min(350px, 90vw);
+    height: clamp(200px, 60vh);
+
+    margin: 0 auto;
+
+    border: 3px solid white;
+    box-sizing: border-box;
+
+    background: #0d0d0b;
+    overflow: hidden;
+}

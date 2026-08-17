@@ -19,6 +19,14 @@ title: Blescat
             <img src="https://em-content.zobj.net/source/serenityos/392/flag-brazil_1f1e7-1f1f7.png" width="20" height="18" style="margin-bottom: -5px; font-weight: bold">
             <span id="relogio"></span>
 
+            <br>
+            <img class="hit-counter" src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fblescat.neocities.org&label=&icon=door-open&color=%23ffffff&message=&style=for-the-badge&tz=Brazil%2FWest">
+
+            <br>
+            <a href="https://blescat.atabook.org" class="guestbook-link">
+                <button class="guestbook"><p>Assine meu Guestbook!</p></button>
+            </a>
+
         </div>
 <br>
 
@@ -65,6 +73,26 @@ title: Blescat
             <p ><strong>> <a href = "https://blescat.newgrounds.com">newgrounds</a></strong></p>
         
         </div>
+
+        <div class="chat-container">
+            <div>
+            <ws-widget
+                type="chat"
+                iid="4838"
+                width="100%"
+                height="340px">
+            </ws-widget>
+            </div>
+        </div>
+
+        <br>
+
+        <div style="margin: 0 auto; text-align: center;">
+        <iframe width="180" height="180" style="border:none" src="https://nvlk.dimden.dev/" name="neolink"></iframe>
+        </div>
+
+<br>
+
     </aside>
     
 
