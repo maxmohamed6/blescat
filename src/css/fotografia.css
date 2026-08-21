@@ -70,6 +70,7 @@ a:hover {
     overflow: hidden;
     background: black;
     z-index: 2;
+    overflow-x: hidden;
 }
 
 .photos {
@@ -79,6 +80,7 @@ a:hover {
     box-sizing: border-box;
     overflow-y: auto;
     background: #080808;
+    overflow-x: hidden;
 }
 
 .photos a {
@@ -148,6 +150,7 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
     gap: 20px;
+    overflow-x: hidden;
 }
 
 .glightbox-container .gslide-image img {
